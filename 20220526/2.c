@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+void rotate(int *x,int *y, int *z);
+
+int main(void){
+    int n1,n2,n3;
+    int *x,*y,*z;
+
+    x=&n1;
+    y=&n2;
+    z=&n3;
+
+    // INPUT
+    printf("入力\nn1：");
+    scanf("%d",&n1);
+    printf("n2：");
+    scanf("%d",&n2);
+    printf("n3：");
+    scanf("%d",&n3);
+
+    rotate(x,y,z);
+
+
+    // OUTPUT
+    printf("出力\nn1：%d\n",n1);
+    printf("n2：%d\n",n2);
+    printf("n3：%d\n",n3);
+    return 0;
+}
+
+void rotate(int *x,int *y, int *z){
+    int tmp=*x;
+    *x=*y;
+    *y=*z;
+    *z=tmp;
+}
